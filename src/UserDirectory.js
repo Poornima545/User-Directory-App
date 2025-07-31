@@ -6,7 +6,6 @@ const UserDirectory = () => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
-
     useEffect(() => {
         const fetchUsers = async () => {
             setLoading(true)
@@ -20,7 +19,7 @@ const UserDirectory = () => {
                 setError(null)
             } catch (err) {
                 setError(err.message)
-            }finally{
+            } finally {
                 setLoading(false)
             }
         }
@@ -57,10 +56,10 @@ const UserDirectory = () => {
                         <ul className="user-list">
                             {
                                 filteredUsers.map(user => (
-                                    <li key={user.id}>
-                                        <p><strong>Name:</strong> {user.name}</p>
-                                        <p><strong>Email:</strong> {user.email}</p>
-                                        <p><strong>company Name:</strong> {user.company.name}</p>
+                                    <li key={user.id} className="user-data">
+                                        <p className="para name"><strong>Name:</strong> {user.name}</p>
+                                        <p className="para"><strong>Email:</strong> {user.email}</p>
+                                        <p className="para company-name"><strong>company Name:</strong> {user.company.name}</p>
                                     </li>
                                 ))}
                         </ul>
