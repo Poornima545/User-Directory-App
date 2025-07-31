@@ -4,7 +4,7 @@ import UserDirectory from './UserDirectory';
 function App() {
   return (
     <div className="App">
-      <UserDirectory/>
+      <UserDirectory />
     </div>
   );
 }
